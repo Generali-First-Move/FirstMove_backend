@@ -17,6 +17,7 @@ import javax.transaction.Transactional;
 import java.util.*;
 
 @RestController
+@RequestMapping("/api")
 public class UserController {
 
     User super_user = new User();
@@ -27,28 +28,49 @@ public class UserController {
     //////////////////////////////////////////////////////////////////
 
     //Getter für Stadtname in Show-Preference View
-    @GetMapping(path = "/api/user")
+    @GetMapping(path = "/user")
     public String GetCity(){
         return super_user.getCity();
     }
-
     //Stadtname von Home in User ablegen für Getter Stadtname
-    @PostMapping(path = "/api/user", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public User getCity(@RequestBody User new_user){
+    @PostMapping(path = "/user")
+    public User postCity(@RequestBody User new_user){
         super_user.setCity(new_user.getCity());
         return super_user;
     }
-    /*@GetMapping(path = "/api/user", produces = MediaType.APPLICATION_JSON_VALUE)
-    public User GetCity(){
-        return user;
-    }*/
+    //Präferenzen der Show-Pref View dem Benutzer zuordnen
+    @PostMapping(path = "/user/pref")
+    public User addPreferences (@RequestBody User new_user){
+        super_user = new_user;
+        //aufruf Servicefunktion
+        //user_to_service();
+        userRepository.save(super_user);
+        return super_user;
+    }
+    //Gibt Nutzer mit allen Präferenzen zurück
+    @GetMapping(path = "/user/pref")
+    public User GetFullUser(){
+        return super_user;
+    }
+    //Gibt Super_user an den Service
+    public void user_to_service (){
+       //UserService userService = new UserService();
+       // userService.locate_city_area(super_user);
+    }
+
+    //Gibt Ergbis des Services an das FrontEnd
+
+
+
+
+
 
 
     //////////////////////////////////////////////////////////////////
     ////////////// TEST Funktionen aus dem Tutorial //////////////////
     //////////////////////////////////////////////////////////////////
 
-    @GetMapping(path = "/person/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    /*@GetMapping(path = "/person/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public User getUserById (@PathVariable("id") Integer id){
 
         List<User> allUser = getUserList();
@@ -62,7 +84,7 @@ public class UserController {
         }
         User a = null;
         return a;
-    }
+    }*/
     @GetMapping(path = "/person", produces = MediaType.APPLICATION_JSON_VALUE)
     @Cacheable("user")
     public List<User> getUserList(){

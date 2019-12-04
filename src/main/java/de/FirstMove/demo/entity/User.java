@@ -32,16 +32,20 @@ public class User {
         this.city = city;
         //this.preferences = preferences;
     }
-    public User(String name, String surname, String city, Integer dist_train_station, Integer dist_uni, Integer dist_shopping, Integer dist_park, Integer dist_sport, Integer dist_center) {
+    public User(String name, String surname, String city, Integer dist_train_station, Integer dist_bus_station, Integer dist_uni, Integer dist_shopping, Integer dist_park, Integer dist_sport,Integer dist_swimming, Integer dist_center, Integer dist_nightlife, Integer dist_safety) {
         this.name = name;
         this.surname = surname;
         this.city = city;
         this.dist_train_station = dist_train_station;
+        this.dist_bus_station = dist_bus_station;
         this.dist_uni = dist_uni;
         this.dist_shopping = dist_shopping;
         this.dist_park = dist_park;
         this.dist_sport = dist_sport;
+        this.dist_swimming = dist_swimming;
         this.dist_center = dist_center;
+        this.dist_nightlife = dist_nightlife;
+        this.dist_safety = dist_safety;
     }
 
 
@@ -130,5 +134,6 @@ public class User {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+
 
 }
