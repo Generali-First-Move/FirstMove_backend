@@ -1,7 +1,7 @@
 package de.FirstMove.demo.controller;
 
 //import de.FirstMove.demo.UserService.UserService;
-import de.FirstMove.demo.entity.Cell;
+
 import de.FirstMove.demo.entity.User;
 import de.FirstMove.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +9,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-
 import javax.transaction.Transactional;
-import java.util.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -29,6 +28,7 @@ public class UserController {
     public String GetCity(){
         return super_user.getCity();
     }
+
     //Stadtname von Home in User ablegen für Getter Stadtname
     @PostMapping(path = "/user")
     public User postCity(@RequestBody User new_user){
@@ -41,7 +41,7 @@ public class UserController {
         super_user = new_user;
         //aufruf Servicefunktion
         //user_to_service();
-        //userRepository.save(super_user);
+        userRepository.save(super_user);
         return super_user;
     }
     //Gibt Nutzer mit allen Präferenzen zurück
@@ -51,19 +51,15 @@ public class UserController {
     }
     //Gibt Super_user an den Service
     public void user_to_service (){
-       //UserService userService = new UserService();
-       // userService.locate_city_area(super_user);
+        //UserService userService = new UserService();
+        // userService.locate_city_area(super_user);
     }
 
     //Gibt Ergbis des Services an das FrontEnd
 
 
 
-    public String test_kästchen (Cell[][] raster)
-    {
 
-        return "Juhu";
-    }
 
 
 

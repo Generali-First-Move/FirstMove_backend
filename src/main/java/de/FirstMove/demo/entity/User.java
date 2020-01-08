@@ -22,7 +22,7 @@ public class User {
     @NotNull
     private String city;
     @NotNull
-    private Integer dist_train_station, dist_bus_station, dist_uni, dist_shopping, dist_park, dist_sport, dist_swimming, dist_center, dist_nightlife, dist_safety;
+    private Integer dist_train_station, dist_bus_station=0, dist_uni, dist_shopping, dist_park, dist_sport, dist_swimming, dist_center, dist_nightlife, dist_safety;
 
     // Constructor
     public User(){};
