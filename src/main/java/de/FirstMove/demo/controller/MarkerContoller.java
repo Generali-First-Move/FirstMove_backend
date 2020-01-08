@@ -17,25 +17,26 @@ import java.util.List;
 
 public class MarkerContoller {
 
+    /* Test classes für GoogleMarker
     Marker super_marker = new Marker();
     @Autowired
    MarkerRepository markerRepository;
-/*
+
     @RequestMapping(method = RequestMethod.POST, value="/result")
 
     public Marker SetMarker(@RequestBody Marker new_marker) {
         super_marker.setMarker(new_marker.getMarker());
         return super_marker;
     }
-*/
-/*
+
+
     @RequestMapping(method = RequestMethod.POST, value="/result")
 
     public Marker SetMarker(@RequestBody Marker new_marker) {
         super_marker.setMarker(new_marker.getMarker());
         return super_marker;
     }
-*/
+
 @PostMapping(path = "/result/view")
 public Marker setMarker(@RequestBody Marker new_marker) {
     super_marker = new_marker;
@@ -47,10 +48,8 @@ public Marker setMarker(@RequestBody Marker new_marker) {
     @GetMapping(path = "/result/view")
     public Marker GetFullMarker() {
         return super_marker;
-
     }
-
-
+*/
     //////////////////////////////////////////////////////////////////
     ///////// Marker Service  Frontend /////////////////////////////
     //////////////////////////////////////////////////////////////////
