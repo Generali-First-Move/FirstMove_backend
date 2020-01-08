@@ -9,6 +9,7 @@ import java.util.Arrays;
 @Service
 public class UserService {
 
+
    /* public String locate_city_area(User super_user){
 
         Integer prioArray [] = new Integer [10];
@@ -39,6 +40,8 @@ public class UserService {
         //3 Geodaten an den Controller übergeben
 
         return "Hallo";*/
+
+
     }
 
 

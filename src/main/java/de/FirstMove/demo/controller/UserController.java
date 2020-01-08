@@ -1,18 +1,15 @@
 package de.FirstMove.demo.controller;
 
 //import de.FirstMove.demo.UserService.UserService;
-import de.FirstMove.demo.UserService.UserService;
+import de.FirstMove.demo.entity.Cell;
 import de.FirstMove.demo.entity.User;
 import de.FirstMove.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.jnlp.UnavailableServiceException;
-import javax.jws.soap.SOAPBinding;
+
 import javax.transaction.Transactional;
 import java.util.*;
 
@@ -44,7 +41,7 @@ public class UserController {
         super_user = new_user;
         //aufruf Servicefunktion
         //user_to_service();
-        userRepository.save(super_user);
+        //userRepository.save(super_user);
         return super_user;
     }
     //Gibt Nutzer mit allen Präferenzen zurück
@@ -62,7 +59,11 @@ public class UserController {
 
 
 
+    public String test_kästchen (Cell[][] raster)
+    {
 
+        return "Juhu";
+    }
 
 
 
