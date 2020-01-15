@@ -119,6 +119,8 @@ public class Cell {
                     raster[count_lng][count_lat].set_UL(laenge - 0.0017299, breite);
                     raster[count_lng][count_lat].set_UR(laenge - 0.0017299, breite + 0.003440375);
 
+
+
                     count_lat++;
                 }
                 count_lng++;

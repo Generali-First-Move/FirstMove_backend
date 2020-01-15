@@ -22,7 +22,7 @@ public class User {
     @NotNull
     private String city;
     @NotNull
-    private Integer dist_train_station, dist_bus_station=0, dist_uni, dist_shopping, dist_park, dist_sport, dist_swimming, dist_center, dist_nightlife, dist_safety;
+    private Integer dist_train_station, dist_bus_station, dist_uni, dist_shopping, dist_park, dist_sport, dist_center, dist_nightlife, dist_safety;
 
     // Constructor
     public User(){};
@@ -32,7 +32,7 @@ public class User {
         this.city = city;
         //this.preferences = preferences;
     }
-    public User(String name, String surname, String city, Integer dist_train_station, Integer dist_bus_station, Integer dist_uni, Integer dist_shopping, Integer dist_park, Integer dist_sport,Integer dist_swimming, Integer dist_center, Integer dist_nightlife, Integer dist_safety) {
+    public User(String name, String surname, String city, Integer dist_train_station, Integer dist_bus_station, Integer dist_uni, Integer dist_shopping, Integer dist_park, Integer dist_sport, Integer dist_center, Integer dist_nightlife, Integer dist_safety) {
         this.name = name;
         this.surname = surname;
         this.city = city;
@@ -42,7 +42,6 @@ public class User {
         this.dist_shopping = dist_shopping;
         this.dist_park = dist_park;
         this.dist_sport = dist_sport;
-        this.dist_swimming = dist_swimming;
         this.dist_center = dist_center;
         this.dist_nightlife = dist_nightlife;
         this.dist_safety = dist_safety;
@@ -55,12 +54,6 @@ public class User {
     }
     public void setDist_bus_station(Integer dist_bus_station) {
         this.dist_bus_station = dist_bus_station;
-    }
-    public Integer getDist_swimming() {
-        return dist_swimming;
-    }
-    public void setDist_swimming(Integer dist_swimming) {
-        this.dist_swimming = dist_swimming;
     }
     public Integer getDist_nightlife() {
         return dist_nightlife;

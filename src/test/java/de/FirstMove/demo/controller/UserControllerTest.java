@@ -1,4 +1,4 @@
-package de.FirstMove.demo.controller;
+/*package de.FirstMove.demo.controller;
 
 import de.FirstMove.demo.UserService.UserService;
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -61,4 +61,4 @@ public class UserControllerTest {
     @Test
     public void deleteUser() {
     }
-}
+}*/

@@ -1,4 +1,4 @@
-package de.FirstMove.demo.entity;
+/*package de.FirstMove.demo.entity;
 
 import junit.framework.TestCase;
 import org.junit.Assert;
@@ -102,4 +102,4 @@ public class UserTest extends TestCase {
 
     public void testSetSurname() throws Exception{
     }
-}
+}*/

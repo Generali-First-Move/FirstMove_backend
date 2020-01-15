@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.transaction.Transactional;
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/api")
 public class UserController {
@@ -46,8 +47,8 @@ public class UserController {
     }
     //Gibt Nutzer mit allen Präferenzen zurück
     @GetMapping(path = "/user/pref")
-    public User GetFullUser(){
-        return super_user;
+    public Integer GetFullUser(){
+        return super_user.getDist_safety();
     }
     //Gibt Super_user an den Service
     public void user_to_service (){
